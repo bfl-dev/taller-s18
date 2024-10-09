@@ -4,7 +4,6 @@ import {onMounted, ref} from 'vue';
 import axios from 'axios';
 
 let worldData = ref([]);
-let algo = worldData.value
 
 const getPopulation = async () => {
   await axios.get("https://countriesnow.space/api/v0.1/countries/population")
@@ -13,14 +12,35 @@ const getPopulation = async () => {
 
 onMounted( () => {
   getPopulation();
-  console.log(worldData.value.keys)
-  worldData.value.forEach( r => console.log(r))
 })
 </script>
 
 <template>
+  <div class="country-container">
+    <div v-for="item in worldData" :key="item.code" class="item-popul">
+
+      <div class="country-info">
+        <p>Pais: {{item.country}}</p>
+        <p>Codigo: {{item.code}}</p>
+      </div>
+
+
+    </div>
+  </div>
 </template>
 
 <style scoped>
+.country-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 
+}
+
+.country-info {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #2c3e50;
+}
 </style>
