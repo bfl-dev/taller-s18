@@ -7,11 +7,15 @@ import PopulationMan from "@/components/populationMan.vue";
     <div class="populman">
       <population-man></population-man>
     </div>
+
   </main>
 </template>
 
 <style scoped>
 * {
-
+  gap: 3rem;
+}
+.populman{
+  width: 1000px;
 }
 </style>

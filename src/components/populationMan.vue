@@ -12,11 +12,12 @@ const getPopulation = async () => {
 }
 
 onMounted( () => {
-  getPopulation();
+  //getPopulation();
 })
 </script>
 
 <template>
+  <button @click="getPopulation()">Countries</button>
   <div class="country-container">
     <div v-for="item in worldData" :key="item.code" class="item-popul">
       <country :country-data="item"></country>
@@ -32,6 +33,5 @@ onMounted( () => {
   gap: 2rem;
   overflow-x: scroll;
 }
-
 
 </style>
