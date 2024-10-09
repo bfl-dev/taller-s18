@@ -4,6 +4,7 @@ import {onMounted, ref} from 'vue';
 import axios from 'axios';
 
 let mangaData = ref({});
+let mangaImg = ref("nada")
 
 const getManga = async () => {
   await axios.get("https://api.jikan.moe/v4/random/manga")
@@ -19,7 +20,6 @@ onMounted( () => {
 <template>
 <button @click="getManga()">Manga</button>
   <div class="manga-container">
-    <img :src="mangaData.images.jpg.image_url">
     <p>Titulo: {{mangaData.title}}</p>
     <p>Titulo en Japones: {{mangaData.title_japanese}}</p>
     <p>Sinopsis:  <br> {{mangaData.synopsis}}</p>
