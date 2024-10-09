@@ -1,5 +1,6 @@
 <script setup>
 import PopulationMan from "@/components/populationMan.vue";
+import MangaRecom from "@/components/mangaRecom.vue";
 </script>
 
 <template>
@@ -7,7 +8,9 @@ import PopulationMan from "@/components/populationMan.vue";
     <div class="populman">
       <population-man></population-man>
     </div>
-
+    <div class="mangaRecom">
+      <manga-recom></manga-recom>
+    </div>
   </main>
 </template>
 
