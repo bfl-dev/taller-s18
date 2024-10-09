@@ -2,6 +2,7 @@
 
 import {onMounted, ref} from 'vue';
 import axios from 'axios';
+import Country from "@/components/country.vue";
 
 let worldData = ref([]);
 
@@ -18,13 +19,7 @@ onMounted( () => {
 <template>
   <div class="country-container">
     <div v-for="item in worldData" :key="item.code" class="item-popul">
-
-      <div class="country-info">
-        <p>Pais: {{item.country}}</p>
-        <p>Codigo: {{item.code}}</p>
-      </div>
-
-
+      <country :country-data="item"></country>
     </div>
   </div>
 </template>
@@ -32,15 +27,11 @@ onMounted( () => {
 <style scoped>
 .country-container{
   display: flex;
+  width: 100%;
   flex-direction: row;
   gap: 2rem;
-
+  overflow-x: scroll;
 }
 
-.country-info {
-  display: flex;
-  padding: 1rem;
-  gap: 1rem;
-  background-color: #2c3e50;
-}
+
 </style>
