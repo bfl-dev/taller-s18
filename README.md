@@ -1,26 +1,10 @@
 # taller-s18
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Taller de proyecto de aplicacion, donde se ha de consumir apis y mostrarlas en pantalla
+Utiliza Axios como libreria de solicitudes http.
+Contiene componentes para la distribucion de estos.
 
 ## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
 
 ### Compile and Minify for Production
 
